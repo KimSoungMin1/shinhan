@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import FooterComp from "../components/Footer/FooterComp";
-import Top from "../components/Top";
+import Top from "../components/Function/Top";
 import { Outlet } from "react-router-dom";
 const CardPage = () => {
     return ( 

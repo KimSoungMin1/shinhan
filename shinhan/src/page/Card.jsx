@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const Comps = (props) => {
+    const [drop,setDrop]=useState(false)
+    const [drops,setDrops]=useState(false)
+    const hide =()=>(setDrops(!drops))
     const cardList=(
         <>
         {props.card.map((post)=>(
@@ -6,7 +11,7 @@ const Comps = (props) => {
                 <img src={post.img} alt="card-img" width={'169px'} height={'270px'}/>
                 <div className="rap">
                     <h2>{post.title}</h2>
-                    <span>비교함담기</span>
+                    <span onClick={hide}>비교함담기</span>{/*onClick drops false true X 그냥 바로 나타나게 컴포넌트 화  */}
                     <div className="card-text-wrap">
                         <div>{post.text}</div>
                         <div className="dis">{post.data}</div>
@@ -19,6 +24,7 @@ const Comps = (props) => {
     )
     return ( 
         <div className="card-page">
+            <div className="case" style={{display : drops ? "block":"none"}}>카드 비교함 </div>
             <div className="inner">
                 <h1>인기/추천카드</h1>
                 <p>당신을 위한 우리의 선택</p>

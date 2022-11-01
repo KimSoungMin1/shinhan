@@ -11,7 +11,7 @@ const DropComp = (props) => {
             {DropMenu}
         </>
         
-     );
+    );
 }
 const DropdownComp=()=>{
     return (
