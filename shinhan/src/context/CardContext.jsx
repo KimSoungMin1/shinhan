@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { createContext } from "react";
- const DataContext =createContext()
 
- const DataProvider = ({children}) => {
-    const [drop,setDrop] =useState({list:[]})
+const DataContext =createContext()
+
+const DataProvider = ({children}) => {
+    const [dropList,setDropList] =useState({list:[]})
+    const [drop,setDrop]=useState(false)
+    const [count,setCount]=useState(0)
     const [card,setCard] =useState([
         {
             id:1,
@@ -161,8 +164,8 @@ import { createContext } from "react";
         },
     ])
     const value = {
-        state : {card,drop},
-        action : {setCard,setDrop}
+        state : {card,drop,count,dropList},
+        action : {setCard,setDrop,setCount,setDropList}
     };
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>
 }

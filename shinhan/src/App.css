@@ -678,8 +678,17 @@ li{
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: -70px;
   cursor: pointer;
+}
+.card-wrap .rap span .compare-nav{
+  background: url(../public/img/banner.png)no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 100% auto;
+  position: absolute;
+  top: 1px;
+  right:-25px;
 }
 
 .card-wrap .rap .card-text-wrap{
@@ -718,7 +727,8 @@ li{
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  position: relative;
+  position: fixed;
+  z-index: 20;
 }
 .case p{
   margin-top: 10px;
@@ -745,17 +755,16 @@ li{
   top: 15px;
 }
 
-/*test2 여기서부터*/
 .compare{
   position: fixed;
   width: 100%;
-  height: 556px;
+  height: 550px;
   z-index: 10;
-  background-color: #f1f3f7;;
+  background-color: #f1f3f7;
+  padding-top: 54px;
 }
 .compare .inner{
   text-align: center;
-  padding:20px 0;
 }
 .compare .inner p{
   padding: 10px 0;
@@ -763,11 +772,38 @@ li{
 .compare .compare-cont{
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: baseline;
 }
 .compare .compare-cont li{
   margin: 30px 30px 0 50px ;
 }
-.compare .compare-cont li div{
+.compare .compare-cont li button{
+  background: url(../public/page2img/삭제버튼.png)no-repeat;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+}
+.compare .compare-cont li .card-name{
+  width: 100%;
+  font-size: 18px;
+  margin:10px 0 0 10px;
+}
+.compare .compare-cont li .data-box{
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+.compare .compare-cont li .data-box div{
+  white-space:pre-wrap ;
+  margin: 10px 10px 0 10px;
+  line-height: 2;
+  font-weight: 600;
+}
+
+.compare .compare-cont .add-card{
   position: relative;
   width: 220px;
   height: 65px;
@@ -775,6 +811,31 @@ li{
   border: 2px dashed #ddd;
   border-radius: 9px;
   color: #111;
+  cursor: pointer;
+}
+.compare .compare-cont .add-card span{
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  font-weight: bold;
+}
+.compare .compare-cont .add-card::after{
+  transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.compare .compare-cont .add-card::before,.compare .compare-cont .add-card::after{
+  display: block;
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  width: 26px;
+  height: 2px;
+  margin-left: -13px;
+  background: #bbb;
 }
 
 /*로그인 페이지*/

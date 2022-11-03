@@ -4,21 +4,19 @@ import Compare from "../components/Function/Compare";
 
 const Comps = () => {
 
-    const [drop,setDrop]=useState(false)
-    const [count,setCount]=useState(0)
+    
     const data = useContext(DataContext);
+    const count =data.state.count
+    const setCount =data.action.setCount
+    const likes = data.state.dropList.list;
+    const drop = data.state.drop;
+    const setDrop = data.action.setDrop
 
-    const hide =()=>{ {/*usecallback */}
-        if (count>=1) {
-            setCount(count-1)
-        }return
-    }
 
-
-    const likes = data.state.drop.list;
+    
+    
     //CardContext에서 받아온 card state 값을 drop state 안에들어있는 list 배열에 넣어줌
     const show =(post)=>{
-
         if (count>=0 && count<2 && likes.find((like)=>(like.id == post.id))==undefined) {
             setCount(count+1)
             const like = {
@@ -31,10 +29,11 @@ const Comps = () => {
 
             const newList = likes.concat(like);
 
-            data.action.setDrop({list:newList})
-            console.log(data.state.drop.list)
+            data.action.setDropList({list:newList})
         }
-
+        else if (likes.find((like)=>(like.id == post.id))) {
+            alert("카드비교함에 이미 담겨 있습니다.")
+        }
         else{
             alert(" 최대 2개까지 담을 수 있습니다.")
         }
@@ -47,12 +46,20 @@ const Comps = () => {
                 <img src={post.img} alt="card-img" width={'169px'} height={'270px'}/>
                 <div className="rap">
                     <h2>{post.title}</h2>
-                    <span onClick={()=>show(post)} key={post.id}>비교함담기</span>
+                    
+                    <span onClick={
+                        //()=>show(post)를 show(post)로 넣을시 무한실행이 일어난다
+                        //매개변수를 넣어야 할경우 아래와 같이 작성하여 무한 실행을 막아준다
+                        ()=>show(post)
+                        } key={post.id}>
+                        비교함담기
+                        <span className="compare-nav"></span>
+                    </span>
                     <div className="card-text-wrap">
                         <div>{post.text}</div>
                         <div className="dis">{post.data}</div>
                     </div>
-                    <button onClick={hide}>상세보기</button>
+                    <button>상세보기</button>
                 </div>
             </div>
         ))}

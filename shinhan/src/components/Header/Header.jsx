@@ -3,7 +3,7 @@ import HeadTopComp from './HeadTopComp';
 const Header = () => {
   return (
     <div className="header">
-     <div className="inner">
+      <div className="inner">
         <HeadTopComp />
         <HeadBottomComp/>
       </div>

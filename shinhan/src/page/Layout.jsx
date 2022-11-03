@@ -2,7 +2,7 @@ import Header from "../components/Header/Header";
 import FooterComp from "../components/Footer/FooterComp";
 import Top from "../components/Function/Top";
 import { Outlet } from "react-router-dom";
-const CardPage = () => {
+const Layout = () => {
     return ( 
         <div>
             <Header/>
@@ -15,4 +15,4 @@ const CardPage = () => {
     );
 }
 
-export default CardPage;
+export default Layout;

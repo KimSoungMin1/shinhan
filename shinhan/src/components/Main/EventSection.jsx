@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css"; //basic
@@ -38,23 +38,26 @@ const Comps = (props) => {
                 spaceBetween={60}//간격
                 slidesPerView={3}//보여질 슬라이드 수
                 style={{'--swiper-pagination-bullet-width':' 38px'}}
+                //pagination
                 pagination={{
+                    //paginationcustom
                     el: '.custom-pagination',
                     clickable: true,
                     renderBullet: function (index, className) {
                         return '<div class="' + className + '">' + ("") +'</div>';
                         }
-                }}//페이징
-                autoplay= {{
-                    "delay": 2000,
-                    'disableOnInteraction': false
                 }}
-                breakpoints={{
+                //autoplay
+                autoplay= {{
+                    "delay": 2000,//autoplay시간
+                    'disableOnInteraction': false //버튼클릭후 autoplay정지 (true,false)
+                }}
+                breakpoints={{//반응형
                     500 :{
-                        slidesPerView:1
+                        slidesPerView:1 //screen width500이상일떄 보여질 슬라이드 갯수
                     },
                     1100 : {
-                        slidesPerView:3
+                        slidesPerView:3//screen width 1100이상일떄 보여질 슬라이드 갯수
                     }
                 }}
                 >
