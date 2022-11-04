@@ -138,24 +138,24 @@ import { Link } from "react-router-dom";
       </div>
   </Link>
 ```
-로그인 페이지 링크
-![ShinHan](./public/README%20IMG/Screenshot_3.png)
-로그인 페이지
-![ShinHan](./public/README%20IMG/Screenshot_4.png)
+로그인 페이지 링크  
+![ShinHan](./public/README%20IMG/Screenshot_3.png)  
+로그인 페이지  
+![ShinHan](./public/README%20IMG/Screenshot_4.png)  
 
-인기/추천카드 페이지 링크
-![ShinHan](./public/README%20IMG/Screenshot_2.png)
-인기/추천 카드 페이지 
-![ShinHan](./public/README%20IMG/Screenshot_5.png)
+인기/추천카드 페이지 링크  
+![ShinHan](./public/README%20IMG/Screenshot_2.png)  
+인기/추천 카드 페이지   
+![ShinHan](./public/README%20IMG/Screenshot_5.png)  
 
 ## 기능
-카드 비교 기능 구현  
-비교할 카드 옆 비교함담기 클릭
-![ShinHan](./public/README%20IMG/Screenshot_7.png)
-  위 드롭다운 버튼 클릭
-![ShinHan](./public/README%20IMG/Screenshot_8.png)
+카드 비교 기능 구현    
+비교할 카드 옆 비교함담기 클릭  
+![ShinHan](./public/README%20IMG/Screenshot_7.png)  
+  위 드롭다운 버튼 클릭  
+![ShinHan](./public/README%20IMG/Screenshot_8.png)  
 
-![ShinHan](./public/README%20IMG/Screenshot_6.png)
+![ShinHan](./public/README%20IMG/Screenshot_6.png)  
 
 ## 반응형
 본 페이지는 반응형페이지입니다  
