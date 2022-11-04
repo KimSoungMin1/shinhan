@@ -1,6 +1,6 @@
-# React을 이용하여 만든 신한카드 반응형 Web-App입니다
+# JavaScript 라이브러리 React를 사용하여 만든 신한카드 반응형 Web-App입니다
 
-포트폴리오용 페이지 입니다  
+본 페이지는 포트폴리오용으로 제작된 페이지 입니다  
 꼭 ⬇ 아래 내용 모두 읽어 보시고, ⬆ 완성된 코드도 확인해 보세요!
 
 [main(master) 브랜치로 이동](https://github.com/KimSoungMin1/shinhan)  
@@ -159,10 +159,75 @@ import { Link } from "react-router-dom";
 
 ## 반응형
 본 페이지는 반응형페이지입니다  
-React 반응형 라이브러리 react-responsive 와 css 
+React 반응형 라이브러리 react-responsive와  
+css Media Query를 사용하였습니다
  ```js
 npm i react-responsive
  ```
+ ```js
+import { useMediaQuery } from 'react-responsive'
+
+const Comps = (props) => {
+    const Desktop = ({ children }) => {
+        const isDesktop = useMediaQuery({ minWidth: 1100 })
+        return isDesktop ? children : null
+    }
+    const Tablet = ({ children }) => {
+        const isTablet = useMediaQuery({ maxWidth: 1100 })
+        return isTablet ? children : null
+    }
+
+     const news=(    
+        <>
+            <Desktop>
+            <div className="news-cont">
+                <div className="news-box">
+                    <h3>공지</h3>
+                    <ul className="news-menu" >
+                    {props.newslist.map((post)=>(
+                        <li key={post.id}>{post.text}<span>New</span></li>
+                    ))}
+                    </ul>
+                </div>
+                <div className="news-box news-box2">
+                    <h3 >금융소비자주의경보</h3>
+                    <ul className="news-menu">
+                    {props.newslist2.map((post)=>(
+                        <li key={post.id}>{post.text}</li>
+                    ))}
+                    </ul>
+                </div>
+            </div>
+            </Desktop>
+            <Tablet>
+            <div className="news-cont">
+                <div className="news-box">
+                    <div className="title-cont">
+                        <h3 onClick={hide} style={{color:tab?"#888":"black"}}>공지</h3> 
+                        <h3 onClick={hide} style={{color:tab?"black":"#888"}}>금융소비자주의경보</h3>
+                    </div>
+                    <ul className="news-menu" style={{display:tab?"none":"block"}} >
+                    {props.newslist.map((post)=>(
+                        <li key={post.id}>{post.text}<span>New</span></li>
+                    ))}
+                    </ul>
+                    <ul className="news-menu" style={{display:tab?"block":"none"}} >
+                    {props.newslist2.map((post)=>(
+                        <li key={post.id}>{post.text}</li>
+                    ))}
+                    </ul>
+                </div>
+            </div>
+            </Tablet>
+        </>
+    )
+ ```
+ ```css
+  @media only screen and (max-width:1100px)
+ ```
+
+![ShinHan](./public/README%20IMG/Screenshot_10.png)
+
 ### `npm start`
 
 Runs the app in the development mode.\

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { useState  } from "react";
 import { useMediaQuery } from 'react-responsive'
 
@@ -6,13 +6,13 @@ const Comps = (props) => {
     const Desktop = ({ children }) => {
         const isDesktop = useMediaQuery({ minWidth: 1100 })
         return isDesktop ? children : null
-      }
-      const Tablet = ({ children }) => {
+    }
+    const Tablet = ({ children }) => {
         const isTablet = useMediaQuery({ maxWidth: 1100 })
         return isTablet ? children : null
-      }
+    }
         
-      const [tab,setTab]=useState(false)
+    const [tab,setTab]=useState(false)
         const hide=()=>{
             setTab(!tab)
         }
