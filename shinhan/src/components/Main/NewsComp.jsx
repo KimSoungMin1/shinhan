@@ -76,7 +76,7 @@ const NewsComp=()=>{
 const newslist=[
     {
         id:1,
-        text:"신한큼융투자 사명변경 안내"
+        text:"신한금융투자 사명변경 안내"
     },
     {
         id:2,

@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 
 
 
-const CardComp = (props) => {
+const CardSection = () => {
     const bullet = ['BEST카드', '  디지털', ' 프리미엄'];
     const cardList=(
         <>
             <SwiperSlide className="flex">
-            {props.card.filter((post)=>(post.id<6)).map((post) => (
+            {card.filter((post)=>(post.id<6)).map((post) => (
                 <div key={post.id} className="card-item">
                     <a href="#">
                     <img src={post.img} alt="Card-Img" />
@@ -22,7 +22,7 @@ const CardComp = (props) => {
             </SwiperSlide>
 
             <SwiperSlide className="flex">
-            {props.card.filter((post)=>(post.id>5&&post.id<=10)).map((post) => (
+            {card.filter((post)=>(post.id>5&&post.id<=10)).map((post) => (
                 <div key={post.id} className="card-item">
                     <a href="#">
                     <img src={post.img} alt="Card-Img"/>
@@ -33,7 +33,7 @@ const CardComp = (props) => {
             </SwiperSlide>
             
             <SwiperSlide className="flex">
-            {props.card.filter((post)=>(post.id>10&&post.id<=15)).map((post) => (
+            {card.filter((post)=>(post.id>10&&post.id<=15)).map((post) => (
                 <div key={post.id} className="card-item">
                     <a href="#">
                     <img src={post.img} alt="Card-Img" />
@@ -84,9 +84,6 @@ const CardComp = (props) => {
             </div>
         </div>
     );
-}
-const CardSection =()=>{
-    return <CardComp card={card}/>
 }
 const card = [
     {
@@ -164,6 +161,7 @@ const card = [
         img: "/img/card.png",
         title: "신한카드 LABE",
     }
-]
+  ]
+  
 
 export default CardSection;

@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
-function ListName(props) {
+function HeadTopComp() {
     const HeadTopCompLeft = (
     <ul className="flex">
-        {props.title.filter((post)=>(post.id<5)).map((post) => (
-        <li key={post.id} className="list-item"><div>{post.title}</div></li>
+        {/*비구조화 할당 */}
+        {title.filter(({id})=>(id<5)).map(({id,title}) => (
+        <li key={id} className="list-item"><div>{title}</div></li>
         ))}
     </ul>
     );
     const HeadTopCompRight = (
     <ul className="flex">
             <Link to={"/login"} ><li className="list-item"><div>로그인</div></li></Link>
-        {props.title.filter((post)=>(post.id>4)).map((post) => (
+        {title.filter((post)=>(post.id>4)).map((post) => (
         <li key={post.id} className="list-item"><div>{post.title}</div></li>
             ))}
     </ul>
@@ -23,9 +24,6 @@ function ListName(props) {
     );
 }
 
-const HeadTopComp = () => {
-    return <ListName title={title}/>;
-};
 const title = [
     {
         id: 1,

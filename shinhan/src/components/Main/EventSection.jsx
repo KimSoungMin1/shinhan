@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 
 
 
+
 SwiperCore.use([Navigation, Pagination, Autoplay]); // 추가
     
     
