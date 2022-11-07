@@ -85,6 +85,7 @@ const CardSection = () => {
         </div>
     );
 }
+
 const card = [
     {
         id: 1,

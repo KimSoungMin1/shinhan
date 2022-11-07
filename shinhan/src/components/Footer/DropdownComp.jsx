@@ -1,7 +1,7 @@
-const DropComp = (props) => {
+const DropdownComp = () => {
     const DropMenu=(
         <ul className="dropdown-menu">
-            {props.Drop.map((post)=>(
+            {Drop.map((post)=>(
                 <li key={post.id}>{post.text}</li>
             ))}
         </ul>
@@ -13,11 +13,7 @@ const DropComp = (props) => {
         
     );
 }
-const DropdownComp=()=>{
-    return (
-    <DropComp Drop={Drop}/>
-    )
-}
+
 const Drop=[
     {
         id:1,

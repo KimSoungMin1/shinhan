@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import DropdownComp from "./DropdownComp";
-const Comps = (props) => {
+const FooterComp = () => {
     const [drop,setDrop]=useState(false)
     function dropDown(){
         setDrop(!drop)
@@ -11,13 +11,13 @@ const Comps = (props) => {
     const text =(
         <>
             <ul className="text-cont">
-                {props.textList.map((post)=>(
+                {textList.map((post)=>(
                     <li key={post.id}>{post.title}</li>
                 ))}
             </ul>
             <div className="foot-bottom-cont"> 
                 <ul className="icon-cont">
-                    {props.iconList.map((post)=>(
+                    {iconList.map((post)=>(
                         <li key={post.id}>
                         <img src={post.img} alt="iconImg" width={'28px'}/>
                         </li>
@@ -48,11 +48,7 @@ const Comps = (props) => {
         </div>
     );
 }
-const FooterComp=()=>{
-    return(
-        <Comps textList={textList} iconList={iconList} />
-    )
-}
+
 const textList=[
     {
         id:1,

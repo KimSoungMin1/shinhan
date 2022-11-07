@@ -2,7 +2,7 @@
 import { useState  } from "react";
 import { useMediaQuery } from 'react-responsive'
 
-const Comps = (props) => {
+const NewsComp = () => {
     const Desktop = ({ children }) => {
         const isDesktop = useMediaQuery({ minWidth: 1100 })
         return isDesktop ? children : null
@@ -25,7 +25,7 @@ const Comps = (props) => {
                 <div className="news-box">
                     <h3>공지</h3>
                     <ul className="news-menu" >
-                    {props.newslist.map((post)=>(
+                    {newslist.map((post)=>(
                         <li key={post.id}>{post.text}<span>New</span></li>
                     ))}
                     </ul>
@@ -33,7 +33,7 @@ const Comps = (props) => {
                 <div className="news-box news-box2">
                     <h3 >금융소비자주의경보</h3>
                     <ul className="news-menu">
-                    {props.newslist2.map((post)=>(
+                    {newslist2.map((post)=>(
                         <li key={post.id}>{post.text}</li>
                     ))}
                     </ul>
@@ -48,12 +48,12 @@ const Comps = (props) => {
                         <h3 onClick={hide} style={{color:tab?"black":"#888"}}>금융소비자주의경보</h3>
                     </div>
                     <ul className="news-menu" style={{display:tab?"none":"block"}} >
-                    {props.newslist.map((post)=>(
+                    {newslist.map((post)=>(
                         <li key={post.id}>{post.text}<span>New</span></li>
                     ))}
                     </ul>
                     <ul className="news-menu" style={{display:tab?"block":"none"}} >
-                    {props.newslist2.map((post)=>(
+                    {newslist2.map((post)=>(
                         <li key={post.id}>{post.text}</li>
                     ))}
                     </ul>
@@ -68,11 +68,7 @@ const Comps = (props) => {
         </div>
     );
 }
-const NewsComp=()=>{
-    return (
-    <Comps newslist={newslist} newslist2={newslist2}/>
-    )
-}
+
 const newslist=[
     {
         id:1,

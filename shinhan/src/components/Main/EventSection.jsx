@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 SwiperCore.use([Navigation, Pagination, Autoplay]); // 추가
     
     
-const Comps = (props) => {
+const EventSection = () => {
     //swiper autoplay 정지 시작 
     const [swiperRef ,setSwiperRef]=useState(null)
     const [ready,setReady]=useState(false)
@@ -62,7 +62,7 @@ const Comps = (props) => {
                     }
                 }}
                 >
-            {props.eventMenu.map((post) => (
+            {eventMenu.map((post) => (
             <SwiperSlide className="event-slide" key={post.id}>
                 <a href="#">
                     <img src={post.img} alt="" />
@@ -85,10 +85,6 @@ const Comps = (props) => {
         </div> 
 };
 
-
-const EventSection = () => {
-    return <Comps eventMenu={eventMenu} />;
-};
 
 const eventMenu = [
     {

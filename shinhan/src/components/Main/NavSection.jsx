@@ -1,7 +1,7 @@
-const Comps = (props) => {
+const NavSection = () => {
     const base=(
         <div className="base-cont">
-            {props.baseList.map((post) => (
+            {baseList.map((post) => (
             <div className="base-row" key={post.id}>
                 <a href="#">
                     <img src={post.img} alt="" />
@@ -28,9 +28,7 @@ const Comps = (props) => {
             </div>
     
 }
-const NavSection = () => {
-    return <Comps baseList={baseList} />;
-};
+
 const baseList = [
     {
         id: 1,
