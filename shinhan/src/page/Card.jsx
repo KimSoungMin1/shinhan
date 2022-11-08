@@ -4,19 +4,18 @@ import Compare from "../components/Function/Compare";
 
 const Card = () => {
   const data = useContext(DataContext);
-  const count = data.state.count;
-  const setCount = data.action.setCount;
+  const { count, drop } = data.state;
+  const { setCount, setDrop } = data.action;
   const likes = data.state.dropList.list;
-  const drop = data.state.drop;
-  const setDrop = data.action.setDrop;
 
   //CardContext에서 받아온 card state 값을 drop state 안에들어있는 list 배열에 넣어줌
   const show = (post) => {
-    if (
+    const cardToCompare =
       count >= 0 &&
       count < 2 &&
-      likes.find((like) => like.id == post.id) == undefined
-    ) {
+      likes.find((like) => like.id === post.id) === undefined;
+      
+    if (cardToCompare) {
       setCount(count + 1);
       const like = {
         id: post.id,
@@ -29,7 +28,7 @@ const Card = () => {
       const newList = likes.concat(like);
 
       data.action.setDropList({ list: newList });
-    } else if (likes.find((like) => like.id == post.id)) {
+    } else if (likes.find((like) => like.id === post.id)) {
       alert("카드비교함에 이미 담겨 있습니다.");
     } else {
       alert(" 최대 2개까지 담을 수 있습니다.");

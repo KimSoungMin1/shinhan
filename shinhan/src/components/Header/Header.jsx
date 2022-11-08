@@ -1,15 +1,14 @@
-import HeadBottomComp from './HeadBottomComp';
-import HeadTopComp from './HeadTopComp';
+import HeadBottomComp from "./HeadBottomComp";
+import HeadTopComp from "./HeadTopComp";
 const Header = () => {
   return (
     <div className="header">
       <div className="inner">
         <HeadTopComp />
-        <HeadBottomComp/>
+        <HeadBottomComp />
       </div>
     </div>
   );
 };
-
 
 export default Header;

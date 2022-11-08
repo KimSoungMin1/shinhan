@@ -4,16 +4,15 @@ import NavSection from "./NavSection";
 import NewsComp from "./NewsComp";
 import MenuItemComp from "./MenuItemComp";
 const Main = () => {
-  return ( 
+  return (
     <div className="Main">
-      <MenuItemComp/>
-      <EventSection/>
-      <CardSection/>
-      <NavSection/>
-      <NewsComp/>
+      <MenuItemComp />
+      <EventSection />
+      <CardSection />
+      <NavSection />
+      <NewsComp />
     </div>
-    
   );
-}
+};
 
 export default Main;

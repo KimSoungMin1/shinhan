@@ -14,7 +14,7 @@ const MenuItemComp = () => {
         .map((post) => (
           <li key={post.id} className="menu-item">
             <a href="#">
-              <img src={post.img} alt="" />
+              <img src={post.img} alt={post.title} />
             </a>
             <span>{post.title}</span>
           </li>
@@ -29,7 +29,7 @@ const MenuItemComp = () => {
         .map((post) => (
           <li key={post.id} className="menu-item">
             <a href="#">
-              <img src={post.img} alt="" />
+              <img src={post.img} alt={post.title} />
             </a>
             <span>{post.title}</span>
           </li>
