@@ -19,6 +19,7 @@ const Search = () => {
       window.addEventListener("scroll", handleFollow);
     };
     watch();
+    //클린업
     return () => {
       window.removeEventListener("scroll", handleFollow);
     };

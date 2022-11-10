@@ -169,6 +169,6 @@ const DataProvider = ({ children }) => {
   };
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 };
-const { Consumer: DataConsumer } = DataContext;
-export { DataConsumer, DataProvider };
+
+export { DataProvider };
 export default DataContext;

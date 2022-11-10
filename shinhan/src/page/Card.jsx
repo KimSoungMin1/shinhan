@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import DataContext from "../context/CardContext";
 import Compare from "../components/Function/Compare";
 
@@ -14,7 +14,7 @@ const Card = () => {
       count >= 0 &&
       count < 2 &&
       likes.find((like) => like.id === post.id) === undefined;
-      
+
     if (cardToCompare) {
       setCount(count + 1);
       const like = {

@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/navigation";
-
-SwiperCore.use([Navigation, Pagination, Autoplay]); // 추가
 
 const EventSection = () => {
   //swiper autoplay 정지 시작

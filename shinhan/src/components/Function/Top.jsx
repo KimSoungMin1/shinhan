@@ -33,7 +33,7 @@ function Top() {
     return () => {
       window.removeEventListener("scroll", handleFollow);
     };
-  });
+  }, [handleTop]);
 
   return (
     <button

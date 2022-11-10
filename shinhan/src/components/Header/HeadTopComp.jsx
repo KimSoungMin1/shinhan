@@ -16,14 +16,14 @@ function HeadTopComp() {
     <ul className="flex">
       <Link to={"/login"}>
         <li className="list-item">
-          <div>로그인</div>
+          <div className="login-link">로그인</div>
         </li>
       </Link>
       {title
-        .filter((post) => post.id > 4)
-        .map((post) => (
-          <li key={post.id} className="list-item">
-            <div>{post.title}</div>
+        .filter(({ id }) => id > 4)
+        .map(({ id, title }) => (
+          <li key={id} className="list-item">
+            <div>{title}</div>
           </li>
         ))}
     </ul>
