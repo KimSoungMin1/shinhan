@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shinhan/img/static/css/main.7ee64688.css",
-    "main.js": "/shinhan/img/static/js/main.4e356153.js",
-    "static/js/787.7ba27dd8.chunk.js": "/shinhan/img/static/js/787.7ba27dd8.chunk.js",
-    "static/media/main_bg.png": "/shinhan/img/static/media/main_bg.bdd3d69b49a55f961596.png",
-    "index.html": "/shinhan/img/index.html",
-    "main.7ee64688.css.map": "/shinhan/img/static/css/main.7ee64688.css.map",
-    "main.4e356153.js.map": "/shinhan/img/static/js/main.4e356153.js.map",
-    "787.7ba27dd8.chunk.js.map": "/shinhan/img/static/js/787.7ba27dd8.chunk.js.map"
+    "main.css": "/shinhan/static/css/main.6321d633.css",
+    "main.js": "/shinhan/static/js/main.10613b9b.js",
+    "static/js/787.7ba27dd8.chunk.js": "/shinhan/static/js/787.7ba27dd8.chunk.js",
+    "static/media/main_bg.png": "/shinhan/static/media/main_bg.bdd3d69b49a55f961596.png",
+    "index.html": "/shinhan/index.html",
+    "main.6321d633.css.map": "/shinhan/static/css/main.6321d633.css.map",
+    "main.10613b9b.js.map": "/shinhan/static/js/main.10613b9b.js.map",
+    "787.7ba27dd8.chunk.js.map": "/shinhan/static/js/787.7ba27dd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ee64688.css",
-    "static/js/main.4e356153.js"
+    "static/css/main.6321d633.css",
+    "static/js/main.10613b9b.js"
   ]
 }
