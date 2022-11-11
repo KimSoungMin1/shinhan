@@ -23,9 +23,9 @@ const NewsComp = () => {
           <div className="news-box">
             <h3>공지</h3>
             <ul className="news-menu">
-              {newslist.map((post) => (
-                <li key={post.id}>
-                  {post.text}
+              {newslist.map(({ id, text }) => (
+                <li key={id}>
+                  {text}
                   <span>New</span>
                 </li>
               ))}
@@ -34,8 +34,8 @@ const NewsComp = () => {
           <div className="news-box news-box2">
             <h3>금융소비자주의경보</h3>
             <ul className="news-menu">
-              {newslist2.map((post) => (
-                <li key={post.id}>{post.text}</li>
+              {newslist2.map(({ id, text }) => (
+                <li key={id}>{text}</li>
               ))}
             </ul>
           </div>
@@ -56,9 +56,9 @@ const NewsComp = () => {
               className="news-menu"
               style={{ display: tab ? "none" : "block" }}
             >
-              {newslist.map((post) => (
-                <li key={post.id}>
-                  {post.text}
+              {newslist.map(({ id, text }) => (
+                <li key={id}>
+                  {text}
                   <span>New</span>
                 </li>
               ))}
@@ -67,8 +67,8 @@ const NewsComp = () => {
               className="news-menu"
               style={{ display: tab ? "block" : "none" }}
             >
-              {newslist2.map((post) => (
-                <li key={post.id}>{post.text}</li>
+              {newslist2.map(({ id, text }) => (
+                <li key={id}>{text}</li>
               ))}
             </ul>
           </div>

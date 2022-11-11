@@ -1,14 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
-}
-h1,h2,h3,h4 {
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-weight: bold;
-}
-a,div,span,li,h1,h2,h3,h4,button {
   font-family: "SpoqaHanSansNeo", "sans-serif";
 }
 
@@ -73,6 +65,9 @@ li {
   height: 74px;
   align-items: center;
 }
+.my-text {
+  font-weight: bold;
+}
 .logo {
   width: 160px;
   height: 39px;
@@ -83,8 +78,7 @@ li {
   background: url(../public/img/logo.png) no-repeat;
   background-size: auto 28px;
 }
-.head-bottom .navbar {
-}
+
 .head-bottom .navbar > li {
   font-size: 20px;
   font-weight: 700;
@@ -106,6 +100,9 @@ li {
   z-index: 10;
   opacity: 0;
   transition: all 0.8s ease-in-out;
+}
+.login-btn {
+  display: none;
 }
 .menu-btn {
   width: 32px;
@@ -751,15 +748,11 @@ li {
   color: #5980e5;
 }
 .case p a {
-  display: inline-block;
   background: url(../public/img/화살표.png) no-repeat;
   background-size: 100% auto;
   width: 20px;
   height: 20px;
   display: inline-block;
-  position: absolute;
-  right: 39%;
-  top: 15px;
 }
 
 .compare {
@@ -865,26 +858,46 @@ li {
   position: absolute;
   bottom: 55%;
   right: 30%;
-  animation: scaling 2s ease-in-out infinite;
+  animation: scaling1 4s infinite;
 }
-
-@keyframes scaling {
+@keyframes scaling1 {
   0% {
     transform: scale(0);
   }
-  50% {
-    transform: scale(1.5);
+  35% {
+    transform: scale(0);
   }
-  100% {
-    transform: scale(2);
-  }
-  50% {
+  55% {
     transform: scale(1);
   }
-  10% {
-    transform: scale(0.5);
+  75% {
+    transform: scale(0);
   }
+  100% {
+    transform: scale(0);
+  }
+}
+.login .login-cont .star2 {
+  position: absolute;
+  bottom: 50%;
+  right: 30%;
+  animation: scaling2 4s infinite;
+}
+
+@keyframes scaling2 {
   0% {
+    transform: scale(0);
+  }
+  15% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(0);
+  }
+  100% {
     transform: scale(0);
   }
 }
@@ -1237,9 +1250,23 @@ li {
     right: 24px;
   }
   .search {
+    display: none;
+  }
+  .login-btn {
+    display: inline-block;
     position: absolute;
-    top: 18px;
-    right: 30px;
+    top: 17px;
+    right: 60px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0px 8px;
+    color: #494f60;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    line-height: 22px;
+    background: #fff;
+    cursor: pointer;
   }
   .align-box {
     display: none;

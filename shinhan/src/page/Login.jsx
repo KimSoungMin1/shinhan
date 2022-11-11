@@ -16,9 +16,16 @@ const Login = () => {
           <img
             src="/page2img/star.png"
             alt=""
-            width={"15px"}
-            height={"15px"}
+            width={"30px"}
+            height={"30px"}
             className="star"
+          />
+          <img
+            src="/page2img/star.png"
+            alt=""
+            width={"30px"}
+            height={"30px"}
+            className="star2"
           />
           <img
             src="/page2img/로그인.png"

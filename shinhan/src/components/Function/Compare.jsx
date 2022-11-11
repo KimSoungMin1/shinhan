@@ -20,8 +20,8 @@ const Compare = () => {
     return;
   };
   const DropMenu = (
-    <div className = "compare" style = {{ display: count > 0 ? "block" : "none" }}>
-      <div className = "inner">
+    <div className="compare" style={{ display: count > 0 ? "block" : "none" }}>
+      <div className="inner">
         <p>
           카드는 2개를 담았을 경우 비교가 가능하며, 최대 2개까지 담을 수
           있습니다.
@@ -59,6 +59,5 @@ const Compare = () => {
   );
   return <>{DropMenu}</>;
 };
-
 
 export default Compare;

@@ -31,6 +31,7 @@ function HeadTopComp() {
   return (
     <div className="head-top flex">
       {HeadTopCompLeft}
+      <div className="my-text">김성민 개인 포트폴리오용 페이지</div>
       {HeadTopCompRight}
     </div>
   );

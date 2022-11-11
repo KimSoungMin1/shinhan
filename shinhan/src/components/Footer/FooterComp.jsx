@@ -2,6 +2,7 @@ import { useState } from "react";
 import DropdownComp from "./DropdownComp";
 const FooterComp = () => {
   const [drop, setDrop] = useState(false);
+
   function dropDown() {
     setDrop(!drop);
     drop && <DropdownComp />;
@@ -10,22 +11,22 @@ const FooterComp = () => {
   const text = (
     <>
       <ul className="text-cont">
-        {textList.map((post) => (
-          <li key={post.id}>{post.title}</li>
+        {textList.map(({ id, title }) => (
+          <li key={id}>{title}</li>
         ))}
       </ul>
       <div className="foot-bottom-cont">
         <ul className="icon-cont">
-          {iconList.map((post) => (
-            <li key={post.id}>
-              <img src={post.img} alt="iconImg" width={"28px"} />
+          {iconList.map(({ id, img }) => (
+            <li key={id}>
+              <img src={img} alt="iconImg" width={"28px"} />
             </li>
           ))}
         </ul>
         <div className="dropdown">
           {drop && <DropdownComp />}
           <button className="drop-btn" onClick={dropDown}>
-            전용회원{" "}
+            전용회원
             <span
               className="drop-nav"
               style={{ transform: drop ? "rotate(-180deg)" : "rotate(0deg)" }}

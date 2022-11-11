@@ -53,12 +53,12 @@ const EventSection = () => {
           },
         }}
       >
-        {eventMenu.map((post) => (
-          <SwiperSlide className="event-slide" key={post.id}>
+        {eventMenu.map(({ id, img, text }) => (
+          <SwiperSlide className="event-slide" key={id}>
             <a href="#">
-              <img src={post.img} alt="" />
+              <img src={img} alt="이벤트 이미지" />
             </a>
-            <div className="text-box">{post.text}</div>
+            <div className="text-box">{text}</div>
           </SwiperSlide>
         ))}
       </Swiper>

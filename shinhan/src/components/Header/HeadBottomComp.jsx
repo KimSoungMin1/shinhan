@@ -51,6 +51,9 @@ const HeadBottomComp = () => {
         </ul>
       </div>
       <div>
+        <Link to={"/login"}>
+          <button className="login-btn">로그인</button>
+        </Link>
         <Search />
         <button className="menu-btn"></button>
       </div>

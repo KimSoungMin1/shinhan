@@ -1,8 +1,8 @@
 const DropdownComp = () => {
   const DropMenu = (
     <ul className="dropdown-menu">
-      {Drop.map((post) => (
-        <li key={post.id}>{post.text}</li>
+      {Drop.map(({ id, text }) => (
+        <li key={id}>{text}</li>
       ))}
     </ul>
   );

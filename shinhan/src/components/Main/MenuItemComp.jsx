@@ -9,14 +9,14 @@ SwiperCore.use([Navigation, Pagination, Autoplay]); // 추가
 const MenuItemComp = () => {
   const menu1 = (
     <ul className="list-row flex">
-      {menulike
-        .filter((post) => post.id < 9)
-        .map((post) => (
-          <li key={post.id} className="menu-item">
+      {menuList
+        .filter(({ id }) => id < 9)
+        .map(({ id, img, title }) => (
+          <li key={id} className="menu-item">
             <a href="#">
-              <img src={post.img} alt={post.title} />
+              <img src={img} alt={title} />
             </a>
-            <span>{post.title}</span>
+            <span>{title}</span>
           </li>
         ))}
     </ul>
@@ -24,14 +24,14 @@ const MenuItemComp = () => {
 
   const menu2 = (
     <ul className="list-row flex">
-      {menulike
-        .filter((post) => post.id > 8)
-        .map((post) => (
-          <li key={post.id} className="menu-item">
+      {menuList
+        .filter(({ id }) => id > 8)
+        .map(({ id, img, title }) => (
+          <li key={id} className="menu-item">
             <a href="#">
-              <img src={post.img} alt={post.title} />
+              <img src={img} alt={title} />
             </a>
-            <span>{post.title}</span>
+            <span>{title}</span>
           </li>
         ))}
     </ul>
@@ -65,7 +65,7 @@ const MenuItemComp = () => {
   );
 };
 
-const menulike = [
+const menuList = [
   {
     id: 1,
     img: "/img/icon-150-type2-1.png",

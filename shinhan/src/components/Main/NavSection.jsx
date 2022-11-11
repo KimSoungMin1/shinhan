@@ -1,12 +1,12 @@
 const NavSection = () => {
   const base = (
     <div className="base-cont">
-      {baseList.map((post) => (
-        <div className="base-row" key={post.id}>
+      {baseList.map(({ id, text, img }) => (
+        <div className="base-row" key={id}>
           <a href="#">
-            <img src={post.img} alt={post.text} />
+            <img src={img} alt={text} />
           </a>
-          <div className="base-text">{post.text}</div>
+          <div className="base-text">{text}</div>
           <div className="base-btn">신청하기</div>
         </div>
       ))}

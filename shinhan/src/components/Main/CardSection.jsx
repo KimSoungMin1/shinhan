@@ -9,39 +9,39 @@ const CardSection = () => {
     <>
       <SwiperSlide className="flex">
         {card
-          .filter((post) => post.id < 6)
-          .map((post) => (
-            <div key={post.id} className="card-item">
+          .filter(({ id }) => id < 6)
+          .map(({ id, img, title }) => (
+            <div key={id} className="card-item">
               <a href="#">
-                <img src={post.img} alt="Card-Img" />
+                <img src={img} alt="Card-Img" />
               </a>
-              <div className="card-title">{post.title}</div>
+              <div className="card-title">{title}</div>
             </div>
           ))}
       </SwiperSlide>
 
       <SwiperSlide className="flex">
         {card
-          .filter((post) => post.id > 5 && post.id <= 10)
-          .map((post) => (
-            <div key={post.id} className="card-item">
+          .filter(({ id }) => id > 5 && id <= 10)
+          .map(({ id, img, title }) => (
+            <div key={id} className="card-item">
               <a href="#">
-                <img src={post.img} alt="Card-Img" />
+                <img src={img} alt="Card-Img" />
               </a>
-              <div className="card-title">{post.title}</div>
+              <div className="card-title">{title}</div>
             </div>
           ))}
       </SwiperSlide>
 
       <SwiperSlide className="flex">
         {card
-          .filter((post) => post.id > 10 && post.id <= 15)
-          .map((post) => (
-            <div key={post.id} className="card-item">
+          .filter(({ id }) => id > 10 && id <= 15)
+          .map(({ id, img, title }) => (
+            <div key={id} className="card-item">
               <a href="#">
-                <img src={post.img} alt="Card-Img" />
+                <img src={img} alt="Card-Img" />
               </a>
-              <div className="card-title">{post.title}</div>
+              <div className="card-title">{title}</div>
             </div>
           ))}
       </SwiperSlide>
