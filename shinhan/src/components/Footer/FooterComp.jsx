@@ -19,7 +19,11 @@ const FooterComp = () => {
         <ul className="icon-cont">
           {iconList.map(({ id, img }) => (
             <li key={id}>
-              <img src={img} alt="iconImg" width={"28px"} />
+              <img
+                src={process.env.PUBLIC_URL + img}
+                alt="iconImg"
+                width={"28px"}
+              />
             </li>
           ))}
         </ul>

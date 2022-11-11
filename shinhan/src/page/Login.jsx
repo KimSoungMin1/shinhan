@@ -14,21 +14,21 @@ const Login = () => {
             </span>
           </div>
           <img
-            src="/page2img/star.png"
+            src={process.env.PUBLIC_URL + "/img/page2img/star.png"}
             alt=""
             width={"30px"}
             height={"30px"}
             className="star"
           />
           <img
-            src="/page2img/star.png"
+            src={process.env.PUBLIC_URL + "/img/page2img/star.png"}
             alt=""
             width={"30px"}
             height={"30px"}
             className="star2"
           />
           <img
-            src="/page2img/로그인.png"
+            src={process.env.PUBLIC_URL + "/img/page2img/로그인.png"}
             alt="icon"
             width={"140px"}
             height={"240px"}

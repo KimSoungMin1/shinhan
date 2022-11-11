@@ -39,7 +39,12 @@ const Card = () => {
     <>
       {data.state.card.map((post) => (
         <div className="card-wrap" key={post.id}>
-          <img src={post.img} alt="card-img" width={"169px"} height={"270px"} />
+          <img
+            src={process.env.PUBLIC_URL + post.img}
+            alt="card-img"
+            width={"169px"}
+            height={"270px"}
+          />
           <div className="rap">
             <h2>{post.title}</h2>
 

@@ -56,7 +56,7 @@ const EventSection = () => {
         {eventMenu.map(({ id, img, text }) => (
           <SwiperSlide className="event-slide" key={id}>
             <a href="#">
-              <img src={img} alt="이벤트 이미지" />
+              <img src={process.env.PUBLIC_URL + img} alt="이벤트 이미지" />
             </a>
             <div className="text-box">{text}</div>
           </SwiperSlide>
@@ -66,7 +66,11 @@ const EventSection = () => {
         <button className="paly-btn">
           <img
             onClick={autoplay}
-            src={ready ? "/img/stop.png" : "/img/run.png"}
+            src={
+              ready
+                ? process.env.PUBLIC_URL + "/img/stop.png"
+                : process.env.PUBLIC_URL + "/img/run.png"
+            }
             alt="button"
             width={"16px"}
           />

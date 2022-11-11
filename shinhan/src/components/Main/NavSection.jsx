@@ -4,7 +4,7 @@ const NavSection = () => {
       {baseList.map(({ id, text, img }) => (
         <div className="base-row" key={id}>
           <a href="#">
-            <img src={img} alt={text} />
+            <img src={process.env.PUBLIC_URL + img} alt={text} />
           </a>
           <div className="base-text">{text}</div>
           <div className="base-btn">신청하기</div>

@@ -32,7 +32,7 @@ const Compare = () => {
             <li key={post.id}>
               <button onClick={() => hide(post)}></button>
               <img
-                src={post.img}
+                src={process.env.PUBLIC_URL + post.img}
                 alt={post.title}
                 width={"138px"}
                 height={"220px"}

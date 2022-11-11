@@ -14,7 +14,7 @@ const MenuItemComp = () => {
         .map(({ id, img, title }) => (
           <li key={id} className="menu-item">
             <a href="#">
-              <img src={img} alt={title} />
+              <img src={process.env.PUBLIC_URL + img} alt={title} />
             </a>
             <span>{title}</span>
           </li>
@@ -29,7 +29,7 @@ const MenuItemComp = () => {
         .map(({ id, img, title }) => (
           <li key={id} className="menu-item">
             <a href="#">
-              <img src={img} alt={title} />
+              <img src={process.env.PUBLIC_URL + img} alt={title} />
             </a>
             <span>{title}</span>
           </li>
@@ -42,7 +42,10 @@ const MenuItemComp = () => {
         <div className="search-inner">
           <div className="search">
             <input type="text" placeholder="'신한플레이'를검색해보세요" />
-            <img src="img/검색아이콘.png" alt="search-icon" />
+            <img
+              src={process.env.PUBLIC_URL + "/img/검색아이콘.png"}
+              alt="search-icon"
+            />
           </div>
         </div>
         <div className="align-box"></div>

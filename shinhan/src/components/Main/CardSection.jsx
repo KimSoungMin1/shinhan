@@ -13,7 +13,7 @@ const CardSection = () => {
           .map(({ id, img, title }) => (
             <div key={id} className="card-item">
               <a href="#">
-                <img src={img} alt="Card-Img" />
+                <img src={process.env.PUBLIC_URL + img} alt="Card-Img" />
               </a>
               <div className="card-title">{title}</div>
             </div>
@@ -26,7 +26,7 @@ const CardSection = () => {
           .map(({ id, img, title }) => (
             <div key={id} className="card-item">
               <a href="#">
-                <img src={img} alt="Card-Img" />
+                <img src={process.env.PUBLIC_URL + img} alt="Card-Img" />
               </a>
               <div className="card-title">{title}</div>
             </div>
@@ -39,7 +39,7 @@ const CardSection = () => {
           .map(({ id, img, title }) => (
             <div key={id} className="card-item">
               <a href="#">
-                <img src={img} alt="Card-Img" />
+                <img src={process.env.PUBLIC_URL + img} alt="Card-Img" />
               </a>
               <div className="card-title">{title}</div>
             </div>
@@ -73,14 +73,20 @@ const CardSection = () => {
         <div className="card-banner flex">
           <Link to={"/c"}>
             <div className="banner">
-              <img src="/img/추천카드.png" alt="추천카드img" />
+              <img
+                src={process.env.PUBLIC_URL + "/img/추천카드.png"}
+                alt="추천카드img"
+              />
               <span>인기 · 추천카드</span>
               <div></div>
             </div>
           </Link>
           <Link to={"/"}>
             <div className="banner">
-              <img src="/img/내게맞는카드.png" alt="내게맞는카드찾기img" />
+              <img
+                src={process.env.PUBLIC_URL + "/img/내게맞는카드.png"}
+                alt="내게맞는카드찾기img"
+              />
               <span>내게맞는 카드찾기</span>
               <div></div>
             </div>
