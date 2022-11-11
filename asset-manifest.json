@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shinhan/static/css/main.0a1f8ac1.css",
+    "main.css": "/shinhan/static/css/main.6ddcaf14.css",
     "main.js": "/shinhan/static/js/main.1501a5dc.js",
     "static/js/787.7ba27dd8.chunk.js": "/shinhan/static/js/787.7ba27dd8.chunk.js",
     "static/media/main_bg.png": "/shinhan/static/media/main_bg.bdd3d69b49a55f961596.png",
     "index.html": "/shinhan/index.html",
-    "main.0a1f8ac1.css.map": "/shinhan/static/css/main.0a1f8ac1.css.map",
+    "main.6ddcaf14.css.map": "/shinhan/static/css/main.6ddcaf14.css.map",
     "main.1501a5dc.js.map": "/shinhan/static/js/main.1501a5dc.js.map",
     "787.7ba27dd8.chunk.js.map": "/shinhan/static/js/787.7ba27dd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a1f8ac1.css",
+    "static/css/main.6ddcaf14.css",
     "static/js/main.1501a5dc.js"
   ]
 }
