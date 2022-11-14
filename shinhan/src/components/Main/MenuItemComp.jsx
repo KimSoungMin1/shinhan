@@ -4,6 +4,7 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FunctionNav from "../Function/FunctionNav";
 SwiperCore.use([Navigation, Pagination, Autoplay]); // 추가
 
 const MenuItemComp = () => {

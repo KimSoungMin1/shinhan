@@ -84,7 +84,7 @@ li {
   font-weight: 700;
   padding: 0 15px;
 }
-.search {
+.search-show {
   opacity: 1;
   z-index: -10;
   width: 30px;
@@ -116,6 +116,14 @@ li {
 .Main {
   padding-top: 130px;
   width: 100%;
+}
+.function-nav-btn {
+  font-weight: bold;
+  color: red;
+  background-color: #fff;
+  cursor: pointer;
+  width: 80px;
+  border-radius: 7px;
 }
 .input-section {
   width: 100%;
@@ -980,7 +988,7 @@ li {
     padding: 0 40px;
   }
   .menu-btn,
-  .search {
+  .search-show {
     width: 24px;
     height: 24px;
   }
@@ -1000,6 +1008,9 @@ li {
 
   .Main {
     padding: 56px 0 0;
+  }
+  .function-nav-btn {
+    display: none;
   }
   .search-inner {
     display: none;
@@ -1252,7 +1263,7 @@ li {
     top: 18px;
     right: 24px;
   }
-  .search {
+  .search-show {
     display: none;
   }
   .login-btn {
@@ -1283,9 +1294,9 @@ li {
   }
   .input-section .search {
     padding: 0;
-    width: 97.5%;
+    width: 97%;
     height: 50px;
-    margin-left: 40px;
+    margin-left: 10px;
   }
   .input-section .search > input {
     width: 80%;

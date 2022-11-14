@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FunctionNav from "../Function/FunctionNav";
 function HeadTopComp() {
   const HeadTopCompLeft = (
     <ul className="flex">
@@ -32,6 +33,7 @@ function HeadTopComp() {
     <div className="head-top flex">
       {HeadTopCompLeft}
       <div className="my-text">김성민 개인 포트폴리오용 페이지</div>
+      <FunctionNav />
       {HeadTopCompRight}
     </div>
   );

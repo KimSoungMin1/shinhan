@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 const Search = () => {
   const [ScrollY, setScrollY] = useState(0);
   const [BtnStatus, setBtnStatus] = useState(false); // 버튼 상태
@@ -25,7 +26,7 @@ const Search = () => {
     };
   });
 
-  return <button className={BtnStatus ? "search" : "search-hid"}></button>;
+  return <button className={BtnStatus ? "search-show" : "search-hid"}></button>;
 };
 
 export default Search;
